@@ -31,6 +31,14 @@ const a = {
 
 const b = { Mike: "aye", Joe: "nay", Johnson: "aye", Peter: "aye" };
 
-const goToGames = (odj) => Object.values(odj).every(values=>values==="aye")
-console.log(goToGames(a))
-console.log(goToGames(b))
+const goToGames = (odj) => {
+  const vel = Object.values(odj).every(values => values === "aye")
+  if (vel) {
+    console.log("Fire!")
+  } else {
+    console.log("We are not ready!!")
+  }
+}
+
+goToGames(a)
+goToGames(b)
